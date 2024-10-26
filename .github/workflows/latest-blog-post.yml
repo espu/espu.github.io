@@ -18,5 +18,7 @@ jobs:
         with:
           feed_urls: 'https://news.ycombinator.com/rss, https://feeds.feedburner.com/ruanyifeng'
           article_limit: 5
+          max_post_count: "5"
+      # feed_list: "https://medium.com/feed/@molly1024"
           article_type: 'recent'
           github_token: ${{ secrets.TOKEN_GITHUB }}```

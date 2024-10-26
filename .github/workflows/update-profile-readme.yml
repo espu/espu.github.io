@@ -2,11 +2,11 @@ name: Update Profile README
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight
+    - cron: '30 6 */1 * *'  # Runs daily at midnight
   workflow_dispatch: # Allows manual triggering
 
 jobs:
-  update-readme:
+  update-readme: 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

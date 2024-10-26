@@ -1,4 +1,4 @@
-name: Update Profile README
+name: Latest blog post & Update Profile README
 
 on:
   schedule:
@@ -11,9 +11,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
+            
       - name: Update README with latest articles
-        uses: Prachi-Jamdade/Prachi-Jamdade@v1.1.0
+      - uses: gautamkrishnar/blog-post-workflow@master 
+      # uses: Prachi-Jamdade/Prachi-Jamdade@v1.1.0
         with:
           feed_urls: 'https://news.ycombinator.com/rss, https://feeds.feedburner.com/ruanyifeng'
           article_limit: 5

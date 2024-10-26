@@ -2,7 +2,7 @@ name: Latest blog post & Update Profile README
 
 on:
   schedule:
-    - cron: '30 6 */1 * *'  # Runs daily at midnight
+    - cron: "30 6 */1 * *"  # Runs daily at midnight
   workflow_dispatch: # Allows manual triggering
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
             
       - name: Update README with latest articles
       - uses: gautamkrishnar/blog-post-workflow@master 
@@ -21,4 +21,4 @@ jobs:
           max_post_count: "5"
       # feed_list: "https://medium.com/feed/@molly1024"
           article_type: 'recent'
-          github_token: ${{ secrets.TOKEN_GITHUB }}```
+          github_token: ${{ secrets.TOKEN_GITHUB }}
